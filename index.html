@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Subnetting VLSM</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <style>
+    .card {
+      height: 100%;
+    }
+
+    .carousel-indicators li {
+      background-color: black;
+    }
+
+    .carousel-indicators .active {
+      background-color: gray;
+    }
+
+    .carousel {
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      background-color: #555;
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+      color: #555;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <a class="navbar-brand mx-3" href="#">Inicio</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="calculadora.html">Calculadora</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+
+
+  <div id="explicaciones">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#myCarousel" data-slide-to="1"></li>
+              <li data-target="#myCarousel" data-slide-to="2"></li>
+              <li data-target="#myCarousel" data-slide-to="3"></li>
+              <li data-target="#myCarousel" data-slide-to="4"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="assets/img/1.jpg" alt="Imagen 1" class="d-block w-100">
+              </div>
+              <div class="carousel-item">
+                <img src="assets/img/2.jpeg" alt="Imagen 2" class="d-block w-100">
+              </div>
+              <div class="carousel-item">
+                <img src="assets/img/3.jpeg" alt="Imagen 3" class="d-block w-100">
+              </div>
+              <div class="carousel-item">
+                <img src="assets/img/4.jpeg" alt="Imagen 4" class="d-block w-100">
+              </div>
+              <div class="carousel-item">
+                <img src="assets/img/5.jpeg" alt="Imagen 5" class="d-block w-100">
+              </div>
+            </div>
+            <a class="carousel-control-prev color-black" href="#myCarousel" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Anterior</span>
+            </a>
+            <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Siguiente</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="text-center">Acerca de redes</h2>
+    <div class="row d-flex my-4">
+      <div class="col-md-4">
+        <div class="card mb-3">
+          <img src="assets/img/6.jpg" width="100" height="328" class="card-img-top" alt="Imagen de IP">
+          <div class="card-body">
+            <h5 class="card-title">¿Qué es una IP?</h5>
+            <p class="card-text">
+              Una IP (Protocolo de Internet) es una dirección única asignada a cada dispositivo conectado a una red.
+              Permite la identificación y comunicación entre los dispositivos en Internet o una red local. Puede ser una
+              dirección IP versión 4 (IPv4) compuesta por cuatro números separados por puntos, o una dirección IP
+              versión 6 (IPv6) compuesta por ocho grupos de números y letras.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card mb-3">
+          <img src="assets/img/7.jpeg" class="card-img-top" width="100" height="328" alt="Imagen de Redes">
+          <div class="card-body">
+            <h5 class="card-title">¿Qué son las redes?</h5>
+            <p class="card-text">
+              Las redes son sistemas de dispositivos interconectados que facilitan la comunicación y el intercambio de
+              información. Pueden ser redes locales (LAN) que conectan dispositivos en un área limitada, o redes de área
+              amplia (WAN) que abarcan distancias más grandes. Las redes permiten compartir recursos y colaborar entre
+              usuarios.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card mb-3">
+          <img src="assets/img/8.jpg" width="100" height="328" class="card-img-top" alt="Imagen de Subnetting">
+          <div class="card-body">
+            <h5 class="card-title">¿Qué es el Subnetting?</h5>
+            <p class="card-text">
+              El subnetting es una técnica que permite dividir una red IP en subredes más pequeñas. Esto ayuda a
+              optimizar el uso de direcciones IP y mejorar la eficiencia de la red al permitir una gestión más precisa
+              de los dispositivos y segmentar el tráfico de manera eficiente.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row d-flex my-4">
+      <div class="col-md-4">
+        <div class="card mb-3">
+          <img src="assets/img/9.png" width="100" height="328" class="card-img-top" alt="Imagen de Broadcast">
+          <div class="card-body">
+            <h5 class="card-title">¿Qué es el Broadcast?</h5>
+            <p class="card-text">
+              El broadcast es un método de comunicación en una red donde un dispositivo envía datos a todos los
+              dispositivos conectados en la misma red. Se utiliza para enviar información a múltiples destinatarios
+              simultáneamente, como anuncios o mensajes de difusión general.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card mb-3">
+          <img src="assets/img/10.jpeg" width="100" height="328" class="card-img-top" alt="Imagen de Host">
+          <div class="card-body">
+            <h5 class="card-title">¿Qué son los Host?</h5>
+            <p class="card-text">
+              En el contexto de las redes, un host se refiere a cualquier dispositivo que está conectado a una red y
+              tiene una dirección IP única. Puede ser una computadora, un servidor, un enrutador u otro dispositivo de
+              red. Los hosts son capaces de enviar, recibir y procesar datos dentro de la red, y se comunican entre sí
+              utilizando sus direcciones IP únicas.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card mb-3">
+          <img src="assets/img/11.jpeg" width="100" height="328" class="card-img-top"
+            alt="Imagen de Redireccionamiento IP">
+          <div class="card-body">
+            <h5 class="card-title">¿Qué es el Redireccionamiento IP?</h5>
+            <p class="card-text">
+              El redireccionamiento IP es una técnica que permite redirigir el tráfico de red de una dirección IP a
+              otra. Puede utilizarse para redirigir paquetes de datos a un servidor diferente, redirigir solicitudes web
+              o establecer políticas de enrutamiento específicas en una red.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row d-flex my-4">
+      <div class="col-md-4">
+        <div class="card mb-3">
+          <img src="assets/img/12.webp" width="100" height="328" class="card-img-top" alt="Imagen de Enrutamiento IP">
+          <div class="card-body">
+            <h5 class="card-title">¿Qué es el Enrutamiento IP?</h5>
+            <p class="card-text">
+              El enrutamiento IP es el proceso de dirigir paquetes de datos a través de una red de dispositivos
+              interconectados. Los routers son los dispositivos principales utilizados para realizar el enrutamiento,
+              analizando las direcciones IP de origen y destino de los paquetes y tomando decisiones sobre la mejor ruta
+              para enviarlos.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card mb-3">
+          <img src="assets/img/13.jpg" width="100" height="328" class="card-img-top" alt="Imagen de NAT">
+          <div class="card-body">
+            <h5 class="card-title">¿Qué es el NAT?</h5>
+            <p class="card-text">
+              El Network Address Translation (NAT) es una técnica que permite traducir direcciones IP en una red. Se
+              utiliza comúnmente en redes privadas para asignar direcciones IP privadas a dispositivos internos y
+              traducirlas a direcciones IP públicas cuando se comunican con redes externas, permitiendo que varios
+              dispositivos compartan una única dirección IP pública.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card mb-3">
+          <img src="assets/img/14.webp" width="100" height="328" class="card-img-top" alt="Imagen de Máscara de Subred">
+          <div class="card-body">
+            <h5 class="card-title">¿Qué es la Máscara de Subred?</h5>
+            <p class="card-text">
+              La máscara de subred es un valor numérico que se utiliza para dividir una dirección IP en la parte de red
+              y la parte de host. Ayuda a identificar qué bits en la dirección IP representan la red y qué bits
+              representan el host. La máscara de subred se utiliza junto con la dirección IP para determinar si una
+              dirección IP está en la misma red o en una red diferente.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>

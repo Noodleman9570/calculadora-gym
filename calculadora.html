@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+	<title>Calculadora SubNetting</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" type="text/css" href="libs/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="libs/datatables.min.css">
+	<script src="libs/bootstrap.bundle.min.js"></script>
+	<script src="libs/datatables.min.js"></script>
+	<script src="libs/jquery-3.6.0.min.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="estilos.css">
+
+<body>
+
+	<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+		<a class="navbar-brand mx-3" href="index.html">Inicio</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+			aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNav">
+			<ul class="navbar-nav">
+				<li class="nav-item">
+					<a class="nav-link" href="calculadora.html">Calculadora</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+
+
+
+
+	<h1 class="mt-5">Calculadora VLSM</h1>
+
+	<div class="d-flex col-12 justify-content-center gap-lg-5">
+		<form onsubmit="return false;">
+			Ingrese la cantidad de subredes<br>
+			<input type="number" id="numero_subnets" min="2" max="999" maxlength="3" placeholder="">
+			<button onclick="cambiarSubRed();">Ingresar</button><span id="nets" style="display:none;"></span>
+			<div id="imgJuni" class="col-12 d-flex justify-content-center p-5">
+				<img width="290px" src="assets/img/calc_vlsm.png" alt="">
+			</div>
+		</form>
+		<form onsubmit="return false;" _lpchecked="1">
+			<p>Ingrese la direccion ip en CIDR<br>
+				<input type="text" id="input_network" value="192.168.1.0/24"><span id="validar_ip"></span>
+			</p>
+
+			<p id="subnet_pargraph">
+
+			</p>
+
+			<button onclick="calcular();">Calcular</button>
+			<button onclick="borrar();">Borrar</button>
+		</form>
+
+	</div>
+
+
+
+	<p id="ans"></p>
+
+
+
+
+
+	<footer class="bg-light text-center text-lg-start">
+		<!-- Grid container -->
+		<div class="container p-4">
+			<!--Grid row-->
+			<div class="row">
+				<!--Grid column-->
+				<div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+
+
+					<div class="col-12 d-flex justify-content-center">
+						<img src="assets/img/unefalogo.png" alt="">
+					</div>
+
+				</div>
+				<!--Grid column-->
+
+				<!--Grid column-->
+				<div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+
+
+					<div id="imgJuni" class="col-12 d-flex justify-content-center">
+						<img width="150px" src="assets/img/juni.jpg" alt="">
+					</div>
+				</div>
+				<!--Grid column-->
+			</div>
+			<!--Grid row-->
+		</div>
+		<!-- Grid container -->
+
+		<!-- Copyright -->
+		<div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+			© 2023 Copyright Junior Pinto :)
+
+		</div>
+		<!-- Copyright -->
+	</footer>
+
+	<script src="vlsm.js">
+	</script>
+
+</body>
+
+</html>
